@@ -1,0 +1,34 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 4, Errors: 0, Skipped: 2, Time elapsed: 6.809 sec <<< FAILURE! - in TestSuite
+amountCheck(com.appium.test.CheckOutAmountCheck)  Time elapsed: 0.679 sec  <<< FAILURE!
+io.appium.java_client.service.local.InvalidServerInstanceException: Invalid server instance exception has occured: There is no installed nodes! Please install node via NPM (https://www.npmjs.com/package/appium#using-node-js) or download and install Appium app (http://appium.io/downloads.html)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.findNodeInCurrentFileSystem(AppiumServiceBuilder.java:157)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.checkAppiumJS(AppiumServiceBuilder.java:317)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.createArgs(AppiumServiceBuilder.java:397)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:342)
+	at io.appium.java_client.service.local.AppiumDriverLocalService.buildService(AppiumDriverLocalService.java:76)
+	at com.appium.base.TestBase.startServer(TestBase.java:35)
+	at com.appium.test.CheckOutAmountCheck.amountCheck(CheckOutAmountCheck.java:43)
+
+tearDown(com.appium.test.CheckOutAmountCheck)  Time elapsed: 0.73 sec  <<< FAILURE!
+java.lang.NullPointerException: null
+	at com.appium.base.TestBase.endServer(TestBase.java:41)
+	at com.appium.test.CheckOutAmountCheck.tearDown(CheckOutAmountCheck.java:92)
+
+dependantObj(com.appium.test.DependantObjects)  Time elapsed: 0.185 sec  <<< FAILURE!
+io.appium.java_client.service.local.InvalidServerInstanceException: Invalid server instance exception has occured: There is no installed nodes! Please install node via NPM (https://www.npmjs.com/package/appium#using-node-js) or download and install Appium app (http://appium.io/downloads.html)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.findNodeInCurrentFileSystem(AppiumServiceBuilder.java:157)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.checkAppiumJS(AppiumServiceBuilder.java:317)
+	at io.appium.java_client.service.local.AppiumServiceBuilder.createArgs(AppiumServiceBuilder.java:397)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:342)
+	at io.appium.java_client.service.local.AppiumDriverLocalService.buildService(AppiumDriverLocalService.java:76)
+	at com.appium.base.TestBase.startServer(TestBase.java:35)
+	at com.appium.test.DependantObjects.dependantObj(DependantObjects.java:21)
+
+tearDown(com.appium.test.DependantObjects)  Time elapsed: 0.214 sec  <<< FAILURE!
+java.lang.NullPointerException: null
+	at com.appium.base.TestBase.endServer(TestBase.java:41)
+	at com.appium.test.DependantObjects.tearDown(DependantObjects.java:45)
+
